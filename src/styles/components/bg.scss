@@ -1,0 +1,20 @@
+.bg {
+    min-height: 100vh;
+    height: 100%;
+    z-index: 0;
+}
+
+.bg-blue {
+    background-color: #038cfc;
+}
+
+.bg-flex {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.bg-flex-center {
+    display: flex;
+    justify-content: center;
+}

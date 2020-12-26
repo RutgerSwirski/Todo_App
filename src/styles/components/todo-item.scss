@@ -1,0 +1,12 @@
+.todo-item-container {
+    position: relative;
+    display: flex;
+    align-items: center;
+    border-bottom: 1.5px solid rgba(0,0,0,0.1);
+    padding: 20px !important;
+}
+.todo-item-text {
+    font-size: 16px;
+    font-weight: 300;
+}
+

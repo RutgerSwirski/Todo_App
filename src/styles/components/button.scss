@@ -1,0 +1,64 @@
+.buttons-container {
+    padding: 15px 0;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+}
+
+.blue-button {
+    margin: 15px 0;
+    font-size: 18px;
+    padding: 10px;
+    border: none;
+    background-color: #038cfc;
+    color: white;
+    font-weight: 400;
+    border-radius: 10px;
+    flex: 0 20%;
+    &:hover {
+        opacity: 0.9;
+    }
+}
+
+.white-text-button {
+    border: none;
+    background: none;
+    color: white;
+    font-size: 15px;
+    font-weight: 400;
+}
+
+.logout-button {
+    font-size: 20px;
+}
+
+.close-button {
+    border: 0;
+    background: none !important;
+    position: absolute;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    right: 12px;
+    top: 15px;
+    width: 35px;
+    height: 32px;
+    opacity: 0.3;
+    &:hover {
+        opacity: 1;
+    }
+    &::before, &::after {
+        position: absolute;
+        left: 15px;
+        content: '';
+        height: 25px;
+        width: 1px;
+        background-color: #333;
+    }
+    &::before {
+        transform: rotate(45deg);
+    }
+    &::after {
+        transform: rotate(-45deg);
+    }
+}

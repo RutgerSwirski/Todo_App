@@ -1,0 +1,41 @@
+.h1 {
+    color: white;
+    font-size: 40px;
+    font-weight: 400;
+    letter-spacing: 1px;
+    margin: 10px 0;
+}
+
+.h1-black {
+    color: black;
+    font-size: 35px;
+    font-weight: 400;
+    letter-spacing: 1px;
+    margin: 10px 0;
+}
+
+.h2 {
+    color: white;
+    font-size: 28px;
+    font-weight: 400;
+    letter-spacing: 1px;
+    margin: 10px 0;
+}
+
+.h2-black {
+    color: black;
+    font-size: 28px;
+    font-weight: 300;
+    letter-spacing: 1px;
+}
+
+.text-center {
+    text-align: center;
+}
+
+button {
+    z-index: 5 !important;
+    &:hover {
+        cursor: pointer;
+    }
+}
