@@ -22,7 +22,9 @@ function Login(props) {
                 <div className="access-form">
                     <input type="email" onChange={(e) => { setEmail(e.target.value) }} className="text-input" name="" id="" placeholder="Email..."/>
                     <input type="password" onChange={(e) => { setPassword(e.target.value) }} className="text-input" name="" id="" placeholder="Password..."/>
-                    <button className="blue-button" onClick={() => handleLogin()}>Submit</button>
+                    <div className="button-container">
+                        <button className="blue-button" onClick={() => handleLogin()}>Submit</button>
+                    </div>
                 </div>
             </div>
             <span className="access-switch">

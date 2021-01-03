@@ -7,7 +7,9 @@ function AddTodoItem(props) {
     return(
         <div className="add-todo-item-container">
             <input onChange={e => setText(e.target.value)} value={text} type="text" className="text-input" id="todo-text-input" placeholder="What needs to be done?"/>
-            <button onClick={ () => handleNewTodo() } className="blue-button">Add</button>
+            <div className="button-container">
+                <button onClick={ () => handleNewTodo() } className="blue-button">Add</button>
+            </div>
         </div>
     )
 
@@ -15,7 +17,7 @@ function AddTodoItem(props) {
         if(text !== '') {
             try {
                 setText('')
-                await firebase.newTodo(props.userID, text)
+                await firebase.newTodo(firebase.auth.currentUser.uid, text)
             } catch(err) {
                 alert(err.message)
             }

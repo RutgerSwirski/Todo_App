@@ -1,11 +1,15 @@
+.access-container {
+    flex: 0 1 500px;
+}
+
 .access-form-container {
     padding: 20px;
     background-color: white;
     border-radius: 10px;
-    width: 500px;
-    margin: 10px;
+    width: 100%;
     box-shadow: 0px 0px 20px 0px rgba(0,0,0,0.2);
     margin-top: 20px;
+    box-sizing: border-box;
 }
 
 .access-form {
@@ -26,3 +30,10 @@
         font-weight: 300;
     }
 }
+
+@media only screen and (max-device-width : 1024px) {
+    .access-container {
+        flex: 0 1 90% !important;
+    }
+}
+
