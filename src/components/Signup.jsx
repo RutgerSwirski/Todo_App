@@ -18,7 +18,9 @@ function SignUp(props) {
                 <div className="access-form">
                     <input onChange={(e) => { setEmail(e.target.value) }} type="text" className="text-input" name="" id="" placeholder="Enter your email..."/>
                     <input onChange={(e) => { setPassword(e.target.value) }} type="password" className="text-input" name="" id="" placeholder="Enter a password..."/>
-                    <button className="blue-button" onClick={ () => { onRegister() } }>Submit</button>
+                    <div className="button-container">
+                        <button className="blue-button" onClick={ () => { onRegister() } }>Submit</button>
+                    </div>
                 </div>
             </div>
             <span className="access-switch">

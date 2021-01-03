@@ -1,8 +1,8 @@
-.buttons-container {
+.button-container {
     padding: 15px 0;
     width: 100%;
     display: flex;
-    justify-content: space-between;
+    justify-content: center;
 }
 
 .blue-button {
@@ -14,7 +14,7 @@
     color: white;
     font-weight: 400;
     border-radius: 10px;
-    flex: 0 20%;
+    flex: 0 1 300px;
     &:hover {
         opacity: 0.9;
     }
@@ -30,6 +30,7 @@
 
 .logout-button {
     font-size: 20px;
+    padding: 0;
 }
 
 .close-button {

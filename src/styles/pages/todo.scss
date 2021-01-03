@@ -1,6 +1,6 @@
 .todo-container {
-    padding: 20px;
-    width: 80%;
+    padding: 20px 0;
+    width: 85%;
     height: 90%;
 }
 
@@ -23,4 +23,21 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
+    flex-wrap: wrap;
+    h1 {
+        font-size: 30px;
+    }
+}
+
+@media only screen and (max-device-width : 1024px) {
+    .todo-top {
+        h1 {
+            font-size: 25px;
+            word-break: break-all;
+        }
+        button {
+            margin: 10px 0;
+            margin-left: auto;
+        }
+    }
 }

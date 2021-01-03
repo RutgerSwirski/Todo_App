@@ -52,7 +52,6 @@ class Firebase {
     async updateTodo(id, boolean) {
         return await this.todosRef.doc(id).update({ completed: boolean })
     }
-
 }
 
 export default new Firebase()

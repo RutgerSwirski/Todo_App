@@ -8,5 +8,7 @@
 .todo-item-text {
     font-size: 16px;
     font-weight: 300;
+    word-break: break-all;
+    max-width: 50%;
 }
 

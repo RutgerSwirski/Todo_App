@@ -10,17 +10,9 @@ import TodoItem from '../components/TodoItem'
 import Blob from '../images/blob.svg'
 
 function Todo(props) {
-    const [userEmail, setUserEmail] = useState('')
     const [todos, setTodos] = useState([])
-    const [userID, setUserID] = useState('')
-
     useEffect(() => {
-        firebase.getCurrentUserEmail()
-        .then((email) => setUserEmail(email))
-
-        firebase.getCurrentUserID()
-        .then((id) => { setUserID(id) })
-
+        const userID = firebase.auth.currentUser.uid
         const unsubscribe = firebase.todosRef.onSnapshot((snap) => {
             const data = snap.docs.map((doc => { return {...doc.data(), id: doc.id } }))
             const filteredData = []
@@ -28,7 +20,7 @@ function Todo(props) {
             setTodos(filteredData)
         })
         return () => unsubscribe()
-    }, [userID])
+    }, [])
 
 
     return(
@@ -36,14 +28,14 @@ function Todo(props) {
             <img className="blob" src={Blob} alt=""/>
             <div className="todo-container">
                 <div className="todo-top">
-                    <h1 className="h1">Welcome {userEmail},</h1>
+                    <h1 className="h1">Welcome {firebase.auth.currentUser.email},</h1>
                     <button onClick={ () => onLogout() } className="white-text-button logout-button">Logout</button>
                 </div>
                 <div className="todo-items-title">
                     <h2 className="h2-black">Here are your todos:</h2>
                 </div>
                 <div className="todo-items-container">
-                    <AddTodoItem userID={userID} />
+                    <AddTodoItem  />
                     { todos.map((todo) => (
                         <TodoItem todo={todo} />
                     )) }
